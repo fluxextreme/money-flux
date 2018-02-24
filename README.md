@@ -1,1 +1,1 @@
-# money-flux
+# money-flux-ui-desktop
