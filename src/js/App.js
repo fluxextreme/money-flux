@@ -3,6 +3,7 @@ import { Route, Link } from 'react-router-dom';
 
 import LoginContainer from './views/login/login.container';
 import DashboardComponent from './views/dashboard/dashboard.component';
+import SignupContainer from './views/signup/signup.container';
 import logo from '../images/logo.svg';
 import '../css/App.css';
 
@@ -27,9 +28,9 @@ class App extends Component {
                   </li>
                 </ul>
               </nav>
-              <nav class="navbar navbar-expand">
-                <div class="form-group app-config-menu-btn">
-                  <label className="app-config-menu-lbl" for="sel1">Currency</label>
+              <nav className="navbar navbar-expand">
+                <div className="form-group app-config-menu-btn">
+                  <label className="app-config-menu-lbl" htmlFor="sel1">Currency</label>
                   <select className="form-control" id="sel1">
                     <option>INR</option>
                     <option>DOLLARS</option>
@@ -37,15 +38,15 @@ class App extends Component {
                     <option>DINAR</option>
                   </select>
                 </div>
-                <div class="form-group app-config-menu-btn">
-                  <label className="app-config-menu-lbl" for="sel1">Groups</label>
+                <div className="form-group app-config-menu-btn">
+                  <label className="app-config-menu-lbl" htmlFor="sel1">Groups</label>
                   <select className="form-control" id="sel1">
                     <option>CORE</option>
                     <option>DEADMEN</option>
                   </select>
                 </div>
-                <div class="form-group app-config-menu-btn">
-                  <label className="app-config-menu-lbl" for="sel1">Period</label>
+                <div className="form-group app-config-menu-btn">
+                  <label className="app-config-menu-lbl" htmlFor="sel1">Period</label>
                   <select className="form-control" id="sel1">
                     <option>INR</option>
                     <option>DOLLARS</option>
@@ -70,12 +71,14 @@ class App extends Component {
           </div>
         </div>
         <Route component={LoginContainer} path="/login" />
+        <Route component={SignupContainer} path="/signup" />
       </div>
     );
   }
 
   setAppMainViewClass = () => {
-    return this.props.location.pathname.includes('/login') ? 'display-none' : 'app-main-view';
+    return (this.props.location.pathname.includes('/login')||this.props.location.pathname.includes('/signup'))
+     ? 'display-none' : 'app-main-view';
   }
 
   setNavItemClass = nav => {

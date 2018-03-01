@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import LoginComponent from './login.component';
-import { login } from '../../actions/login.action';
+import { loginWithEmail } from '../../actions/login.action';
 
 const mapStateToProps = (state) => {
   return state.userDetails;
@@ -8,8 +8,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        doLoginRequest: (loginDetails)=>{
-          dispatch(login(loginDetails));
+        doLoginWithEmail: (loginDetails)=>{
+          dispatch(loginWithEmail(loginDetails));
         }
     }
 }

@@ -1,6 +1,6 @@
 const INITIAL_STATE = {};
 
-export default userDetails = (state = INITIAL_STATE, action) => {
+export const UserDetails = (state = INITIAL_STATE, action) => {
     switch (action.type) {
         case 'GET_USER_DETAILS':
             return { ...state, userdetails: action.payload };
