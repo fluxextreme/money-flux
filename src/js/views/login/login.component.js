@@ -8,17 +8,20 @@ export class LoginComponent extends Component {
         return (
             <div className="login-container">
                 <div className="login-form-panel">
-                    <form action={this.props.doLoginWithEmail({})}>
+                    <form>
                         <div className="app-title">Money Flux</div>
                         <div className="form-group">
                             <label htmlFor="email">Email address:</label>
-                            <input type="email" className="form-control" id="email" />
+                            <input type="email" className="form-control" id="username" name="username" />
                         </div>
                         <div className="form-group">
                             <label htmlFor="pwd">Password:</label>
-                            <input type="password" className="form-control" id="pwd" />
+                            <input type="password" className="form-control" id="password" name="password"/>
                         </div>
-                        <button type="submit" className="btn btn-success btn-login">Login</button>
+                        <button type="submit" className="btn btn-success btn-login"
+                        onClick={()=>{
+                          this.props.doLoginWithEmail({});
+                        }}>Login</button>
                     </form>
                 </div>
                 <div className="app-details-panel">

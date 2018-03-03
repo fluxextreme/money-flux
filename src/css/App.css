@@ -41,19 +41,13 @@ float:right;
   margin-right:32px;
 }
 
-
-.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:focus, .navbar-inverse .navbar-nav > .active > a:hover{
-  border-bottom: 2px solid #8BC34A;
-  background: transparent;
-}
-
 .app-icon{
   padding: 0 4px;
 }
 
 .menu-anchor-btn{
   margin-left: 10px;
-  font-size: 15px;
+  font-size: 18px;
   color: #689F38 !important;
   text-decoration: none !important;
   padding: 20px 4px;
@@ -106,10 +100,11 @@ float:right;
 .navbar-expand .navbar-nav .nav-link{
   padding: 7px 15px;
   color: #999;
+  font-size:18px;
 }
 
-.navbar-expand .navbar-nav > .active > a, 
-.navbar-expand .navbar-nav > .active > a:focus, 
+.navbar-expand .navbar-nav > .active > a,
+.navbar-expand .navbar-nav > .active > a:focus,
 .navbar-expand .navbar-nav > .active > a:hover{
   border-bottom:2px solid #8BC34A;
   color: #FFF;

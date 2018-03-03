@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
+import {Link, Route} from 'react-router-dom'
 
 export class SignupComponent extends Component {
     render() {
         return (
-            <div className="signup-container">
+          <div className="module-root-container-center">
+          <div className="signup-container">
+            <div className="signup-form-container">
                 <form>
                     <div className="app-title">Money Flux - SignUp with E-mail</div>
                     <div className="form-group">
@@ -23,7 +26,15 @@ export class SignupComponent extends Component {
                         <input name="phone" type="password" className="form-control" id="phone" />
                     </div>
                     <button type="submit" className="btn btn-success btn-login" onClick={this.props.doSignupWithEmail()}>SignUp</button>
+                    <div className="signup-form-footer">
+                    <Link className="login-link" to={{pathname:"/login", href:"#"}}>Login</Link>
+                    </div>
                 </form>
+            </div>
+            <div className="app-details-container">
+
+            </div>
+            </div>
             </div>
         )
     }
