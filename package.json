@@ -14,12 +14,22 @@
     "redux-form": "^7.3.0",
     "redux-thunk": "^2.2.0",
     "webpack": "^3.10.0",
-    "webpack-dev-server": "^2.11.1"
+    "webpack-dev-server": "^2.11.1",
+    "webpack-war-plugin": "^1.0.0-beta.3"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "webpack-build": "webpack",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.0.6"
   }
 }
