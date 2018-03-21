@@ -1,7 +1,6 @@
 import { signupWithEmail } from '../../actions/signup.action';
 import { connect } from 'react-redux';
 import SignupComponent from './signup.component';
-import '../../../css/signup.css';
 
 export const mapStateToProps = (state) => {
     return state;

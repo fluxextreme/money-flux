@@ -1,26 +1,29 @@
 import axios from 'axios';
 
-export const loginWithEmail = (loginDetails) => {
+export const loginWithEmail = (history, loginDetails) => {
     return (dispatch) => {
         console.log('Login POST Object::::::::::::::'+JSON.stringify(loginDetails));
         let url = 'http://localhost:8080/money-flux-dataservice/login-security-check';
+        let requestPayload='username='+loginDetails.username+'&password='+loginDetails.password;
         let axiosConfig = {
             headers: {
-                'Content-Type': 'application/json',
+                'Content-Type': 'application/x-www-form-urlencoded',
             }
         };
-        return axios.post(url, "username=user@gmail.com&password=1234", axiosConfig).then((response) => {
+        return axios.post(url, requestPayload, axiosConfig).then((response) => {
             console.log('login success response::::' + JSON.stringify(response));
-            return {
+            dispatch ({
                 type:"LOGIN_SUCCESS",
                 payload: response.data
-            }
+            });
+            history.push('/dashboard');
         }, error => {
             console.log('login failure response::::' + JSON.stringify(error));
-            return {
+            dispatch ({
                 type: "LOGIN_FAILURE",
                 payload: error
-            }
+            });
+            history.push('/signup');
         });
     }
 }

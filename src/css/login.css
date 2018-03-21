@@ -1,28 +1,41 @@
 .login-container{
-    width: 600px;
-    height: 300px;
-    border: 1px solid #D4D5D5;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.3);
-    position: absolute;
-    left:50%;
-    top:50%;
-    margin-left:-300px;
-    margin-top:-200px;
-    text-align: center;
+  width:100%;
+  max-width: 1920px;
+  min-width:800px;
+  display:table;
+  height:100%;
+  margin:auto;
 }
 
-.login-form-panel{
-    width:45%;
-    height:100%;
-    padding: 15px 25px;
-    float:left;
-    border-right:1px solid #D4D5D5;
+.app-details-container{
+  padding:10px;
+  width: 60%;
+  height: 100%;
+  max-width:1152px;
+  float:left;
+  display:inline-table;
 }
 
-.app-details-panel{
-    width:55%;
-    height:100%;
-    float:right;
+.login-form-container{
+  padding:75px;
+  width: 40%;
+  height:100%;
+  max-width:768px;
+  float:left;
+  display:inline-table;
+}
+
+.login-form-footer{
+  width:100%;
+  display:inline-table;
+  margin-top:30px;
+}
+
+.login-link{
+  width:100%;
+  text-align:left;
+  float:left;
+  display:inline-block;
 }
 
 .app-title{
@@ -43,10 +56,4 @@ label{
     text-align: left;
     width: 100%;
     color: #878787;
-}
-.registration-link{
-    font-size:110%;
-    color: rgb(25,125,225) !important;
-    width:100%;
-    padding:5px 10px;
 }

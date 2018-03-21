@@ -1,17 +1,18 @@
 import { connect } from 'react-redux';
 import LoginComponent from './login.component';
 import { loginWithEmail } from '../../actions/login.action';
+import { withRouter } from 'react-router-dom'
 
-const mapStateToProps = (state) => {
-  return state.userDetails;
+const mapStateToProps = (state, ownProps) => {
+  return state.login;
 }
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = (dispatch, ownProps) => {
     return {
         doLoginWithEmail: (loginDetails)=>{
-          dispatch(loginWithEmail(loginDetails));
+          dispatch(loginWithEmail(ownProps.history, loginDetails));
         }
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(LoginComponent);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(LoginComponent));

@@ -3,7 +3,12 @@ import { connect } from 'react-redux';
 import { userDetails } from '../../actions/user-details.action';
 
 const mapStateToProps = (state) => {
-    return state.userDetails;
+    console.log(JSON.stringify(ownProps));
+    let dashboardData={
+      userDetails: state.login
+    }
+    console.log('DashboardData:::::'+JSON.stringify(dashboardData));
+    return dashboardData;
 }
 
 const mapDispatchToProps = (dispatch) => {
