@@ -8,8 +8,8 @@ export const mapStateToProps = (state) => {
 
 export const mapDispatchToProps = (dispatch) => {
     return {
-        doSignupWithEmail: (user) => {
-            dispatch(signupWithEmail(user));
+        doSignupWithEmail: (signupDetails) => {
+            dispatch(signupWithEmail(signupDetails));
         }
     }
 }

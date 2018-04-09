@@ -8,6 +8,7 @@ import thunk from 'redux-thunk';
 import App from './js/App';
 import AppReducer from './js/reducers/app-reducer';
 import registerServiceWorker from './js/registerServiceWorker';
+import './css/index.css';
 
 const appStore = createStore(AppReducer, applyMiddleware(thunk));
 

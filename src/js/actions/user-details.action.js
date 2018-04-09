@@ -1,12 +1,9 @@
 import axios from 'axios';
 
 export const getUserDetailsById = userId => {
-    return (dispatch, userId) => {
-        return axios.get({
-            url: '',
-            method: GET
-        }).then(response => {
-            return response.data;
-        });
+
+    return {
+        type: "USER_DETAILS_RETRIEVAL",
+        payload: null
     }
 }

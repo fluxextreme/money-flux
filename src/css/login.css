@@ -5,6 +5,7 @@
   display:table;
   height:100%;
   margin:auto;
+  background: #2c3539;
 }
 
 .app-details-container{
@@ -36,13 +37,29 @@
   text-align:left;
   float:left;
   display:inline-block;
+  font-size: 22px;
+}
+
+.login-link:hover, :active{
+  text-decoration: none;
+}
+
+.app-header-panel{
+width:100%;
+margin-bottom: 45px;
 }
 
 .app-title{
-    font-size:28px;
+    font-size:30px;
     text-align:left;
     color: #8BC34A !important;
-    margin-bottom:10px;
+}
+
+.app-caption{
+  width:100%;
+  text-align: left;
+  font-size:18px;
+  color: #D4D5D5;
 }
 
 .btn-login{
